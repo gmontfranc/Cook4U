@@ -1,0 +1,13 @@
+postgres:
+  image: postgres:latest
+  build: ./matchit-docker-development-environment/postgres
+  environment:
+    POSTGRESQL_USER: "useradmin"
+    POSTGRESQL_PASSWORD: "useradmin"
+  ports:
+    - "5432:5432"
+  networks:
+    - cook4u
+  volumes:
+    - postgres-data:/var/lib/pgsql/data
+    - ./cook4u-development-environment/postgres/postgresql-data/:/opt/app-root/src/postgresql-start/data
