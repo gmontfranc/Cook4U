@@ -1,6 +1,6 @@
 postgres:
   image: postgres:latest
-  build: ./matchit-docker-development-environment/postgres
+  build: ./cook4u-development-environment/postgres
   environment:
     POSTGRESQL_USER: "useradmin"
     POSTGRESQL_PASSWORD: "useradmin"
