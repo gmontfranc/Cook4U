@@ -45,6 +45,8 @@ public class ReservationEntity {
     @JoinColumn(name = "\"UserId\"")
     private UserEntity user;
 
+    //TODO: MenuFK
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "\"ReservationDish\"", joinColumns = @JoinColumn(name = "\"ReservationId"), inverseJoinColumns = @JoinColumn(name = "\"DishId\""))
     private Set<DishEntity> reservationDishes;

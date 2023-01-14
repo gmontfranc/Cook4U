@@ -4,6 +4,7 @@ import com.cook4u.model.menu.MenuEntity;
 import com.cook4u.model.reservation.ReservationEntity;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.Set;

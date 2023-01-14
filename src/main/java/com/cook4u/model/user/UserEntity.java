@@ -27,11 +27,9 @@ public class UserEntity implements Serializable {
     @Column(name = "\"UserId\"")
     private Long id;
 
-    @Column(name = "\"OauthId\"")
-    private int oauthId;
     @Column(name = "\"Age\"")
     private int age;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JsonIgnore
     @JoinColumn(name = "\"RoleId\"")
     private RoleEntity role;
@@ -45,6 +43,9 @@ public class UserEntity implements Serializable {
     private String email;
     @Column(name = "\"Description\"")
     private String description;
+    @Column(name = "\"Password\"")
+    @JsonIgnore
+    private String password;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Set<MenuEntity> menus;

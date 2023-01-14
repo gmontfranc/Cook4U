@@ -3,9 +3,9 @@
 --
 
 -- Dumped from database version 15.1 (Debian 15.1-1.pgdg110+1)
--- Dumped by pg_dump version 15.0
+-- Dumped by pg_dump version 15.1
 
--- Started on 2023-01-09 08:45:25
+-- Started on 2023-01-13 18:46:25
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 217 (class 1259 OID 24601)
+-- TOC entry 214 (class 1259 OID 16389)
 -- Name: Dishes; Type: TABLE; Schema: public; Owner: useradmin
 --
 
@@ -39,7 +39,7 @@ CREATE TABLE public."Dishes" (
 ALTER TABLE public."Dishes" OWNER TO useradmin;
 
 --
--- TOC entry 225 (class 1259 OID 41007)
+-- TOC entry 215 (class 1259 OID 16395)
 -- Name: Dishes_DishId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -55,8 +55,8 @@ CREATE SEQUENCE public."Dishes_DishId_seq"
 ALTER TABLE public."Dishes_DishId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3431 (class 0 OID 0)
--- Dependencies: 225
+-- TOC entry 3412 (class 0 OID 0)
+-- Dependencies: 215
 -- Name: Dishes_DishId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -64,7 +64,7 @@ ALTER SEQUENCE public."Dishes_DishId_seq" OWNED BY public."Dishes"."DishId";
 
 
 --
--- TOC entry 219 (class 1259 OID 24618)
+-- TOC entry 216 (class 1259 OID 16396)
 -- Name: MenuDish; Type: TABLE; Schema: public; Owner: useradmin
 --
 
@@ -78,7 +78,7 @@ CREATE TABLE public."MenuDish" (
 ALTER TABLE public."MenuDish" OWNER TO useradmin;
 
 --
--- TOC entry 230 (class 1259 OID 41051)
+-- TOC entry 217 (class 1259 OID 16399)
 -- Name: MenuDish_DishId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -94,8 +94,8 @@ CREATE SEQUENCE public."MenuDish_DishId_seq"
 ALTER TABLE public."MenuDish_DishId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3432 (class 0 OID 0)
--- Dependencies: 230
+-- TOC entry 3413 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: MenuDish_DishId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -103,7 +103,7 @@ ALTER SEQUENCE public."MenuDish_DishId_seq" OWNED BY public."MenuDish"."DishId";
 
 
 --
--- TOC entry 228 (class 1259 OID 41038)
+-- TOC entry 218 (class 1259 OID 16400)
 -- Name: MenuDish_MenuDishId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -119,8 +119,8 @@ CREATE SEQUENCE public."MenuDish_MenuDishId_seq"
 ALTER TABLE public."MenuDish_MenuDishId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3433 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3414 (class 0 OID 0)
+-- Dependencies: 218
 -- Name: MenuDish_MenuDishId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -128,7 +128,7 @@ ALTER SEQUENCE public."MenuDish_MenuDishId_seq" OWNED BY public."MenuDish"."Menu
 
 
 --
--- TOC entry 229 (class 1259 OID 41045)
+-- TOC entry 219 (class 1259 OID 16401)
 -- Name: MenuDish_MenuId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -144,8 +144,8 @@ CREATE SEQUENCE public."MenuDish_MenuId_seq"
 ALTER TABLE public."MenuDish_MenuId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3434 (class 0 OID 0)
--- Dependencies: 229
+-- TOC entry 3415 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: MenuDish_MenuId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -153,7 +153,7 @@ ALTER SEQUENCE public."MenuDish_MenuId_seq" OWNED BY public."MenuDish"."MenuId";
 
 
 --
--- TOC entry 216 (class 1259 OID 24588)
+-- TOC entry 220 (class 1259 OID 16402)
 -- Name: Menus; Type: TABLE; Schema: public; Owner: useradmin
 --
 
@@ -168,7 +168,7 @@ CREATE TABLE public."Menus" (
 ALTER TABLE public."Menus" OWNER TO useradmin;
 
 --
--- TOC entry 226 (class 1259 OID 41016)
+-- TOC entry 221 (class 1259 OID 16407)
 -- Name: Menus_MenuId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -184,8 +184,8 @@ CREATE SEQUENCE public."Menus_MenuId_seq"
 ALTER TABLE public."Menus_MenuId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3435 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 3416 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: Menus_MenuId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -193,7 +193,7 @@ ALTER SEQUENCE public."Menus_MenuId_seq" OWNED BY public."Menus"."MenuId";
 
 
 --
--- TOC entry 227 (class 1259 OID 41023)
+-- TOC entry 222 (class 1259 OID 16408)
 -- Name: Menus_UserId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -209,8 +209,8 @@ CREATE SEQUENCE public."Menus_UserId_seq"
 ALTER TABLE public."Menus_UserId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3436 (class 0 OID 0)
--- Dependencies: 227
+-- TOC entry 3417 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: Menus_UserId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -218,7 +218,7 @@ ALTER SEQUENCE public."Menus_UserId_seq" OWNED BY public."Menus"."UserId";
 
 
 --
--- TOC entry 221 (class 1259 OID 24661)
+-- TOC entry 223 (class 1259 OID 16409)
 -- Name: Ratings; Type: TABLE; Schema: public; Owner: useradmin
 --
 
@@ -235,7 +235,7 @@ CREATE TABLE public."Ratings" (
 ALTER TABLE public."Ratings" OWNER TO useradmin;
 
 --
--- TOC entry 231 (class 1259 OID 41067)
+-- TOC entry 224 (class 1259 OID 16414)
 -- Name: Ratings_RatingId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -251,8 +251,8 @@ CREATE SEQUENCE public."Ratings_RatingId_seq"
 ALTER TABLE public."Ratings_RatingId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3437 (class 0 OID 0)
--- Dependencies: 231
+-- TOC entry 3418 (class 0 OID 0)
+-- Dependencies: 224
 -- Name: Ratings_RatingId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -260,7 +260,7 @@ ALTER SEQUENCE public."Ratings_RatingId_seq" OWNED BY public."Ratings"."RatingId
 
 
 --
--- TOC entry 232 (class 1259 OID 41074)
+-- TOC entry 225 (class 1259 OID 16415)
 -- Name: Ratings_UserId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -276,8 +276,8 @@ CREATE SEQUENCE public."Ratings_UserId_seq"
 ALTER TABLE public."Ratings_UserId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3438 (class 0 OID 0)
--- Dependencies: 232
+-- TOC entry 3419 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: Ratings_UserId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -285,7 +285,7 @@ ALTER SEQUENCE public."Ratings_UserId_seq" OWNED BY public."Ratings"."UserId";
 
 
 --
--- TOC entry 220 (class 1259 OID 24634)
+-- TOC entry 226 (class 1259 OID 16416)
 -- Name: ReservationDish; Type: TABLE; Schema: public; Owner: useradmin
 --
 
@@ -299,7 +299,7 @@ CREATE TABLE public."ReservationDish" (
 ALTER TABLE public."ReservationDish" OWNER TO useradmin;
 
 --
--- TOC entry 235 (class 1259 OID 41098)
+-- TOC entry 227 (class 1259 OID 16419)
 -- Name: ReservationDish_DishId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -315,8 +315,8 @@ CREATE SEQUENCE public."ReservationDish_DishId_seq"
 ALTER TABLE public."ReservationDish_DishId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3439 (class 0 OID 0)
--- Dependencies: 235
+-- TOC entry 3420 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: ReservationDish_DishId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -324,7 +324,7 @@ ALTER SEQUENCE public."ReservationDish_DishId_seq" OWNED BY public."ReservationD
 
 
 --
--- TOC entry 233 (class 1259 OID 41088)
+-- TOC entry 228 (class 1259 OID 16420)
 -- Name: ReservationDish_ReservationDishId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -340,8 +340,8 @@ CREATE SEQUENCE public."ReservationDish_ReservationDishId_seq"
 ALTER TABLE public."ReservationDish_ReservationDishId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3440 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 3421 (class 0 OID 0)
+-- Dependencies: 228
 -- Name: ReservationDish_ReservationDishId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -349,7 +349,7 @@ ALTER SEQUENCE public."ReservationDish_ReservationDishId_seq" OWNED BY public."R
 
 
 --
--- TOC entry 234 (class 1259 OID 41093)
+-- TOC entry 229 (class 1259 OID 16421)
 -- Name: ReservationDish_ReservationId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -365,8 +365,8 @@ CREATE SEQUENCE public."ReservationDish_ReservationId_seq"
 ALTER TABLE public."ReservationDish_ReservationId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3441 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3422 (class 0 OID 0)
+-- Dependencies: 229
 -- Name: ReservationDish_ReservationId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -374,7 +374,7 @@ ALTER SEQUENCE public."ReservationDish_ReservationId_seq" OWNED BY public."Reser
 
 
 --
--- TOC entry 218 (class 1259 OID 24610)
+-- TOC entry 230 (class 1259 OID 16422)
 -- Name: Reservations; Type: TABLE; Schema: public; Owner: useradmin
 --
 
@@ -386,14 +386,40 @@ CREATE TABLE public."Reservations" (
     "Comments" text,
     "TotalPrice" double precision,
     "ReservationId" integer NOT NULL,
-    "UserId" integer NOT NULL
+    "UserId" integer NOT NULL,
+    "MenuId" integer NOT NULL
 );
 
 
 ALTER TABLE public."Reservations" OWNER TO useradmin;
 
 --
--- TOC entry 236 (class 1259 OID 41110)
+-- TOC entry 238 (class 1259 OID 16514)
+-- Name: Reservations_MenuId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
+--
+
+CREATE SEQUENCE public."Reservations_MenuId_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Reservations_MenuId_seq" OWNER TO useradmin;
+
+--
+-- TOC entry 3423 (class 0 OID 0)
+-- Dependencies: 238
+-- Name: Reservations_MenuId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
+--
+
+ALTER SEQUENCE public."Reservations_MenuId_seq" OWNED BY public."Reservations"."MenuId";
+
+
+--
+-- TOC entry 231 (class 1259 OID 16427)
 -- Name: Reservations_ReservationId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -409,8 +435,8 @@ CREATE SEQUENCE public."Reservations_ReservationId_seq"
 ALTER TABLE public."Reservations_ReservationId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3442 (class 0 OID 0)
--- Dependencies: 236
+-- TOC entry 3424 (class 0 OID 0)
+-- Dependencies: 231
 -- Name: Reservations_ReservationId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -418,7 +444,7 @@ ALTER SEQUENCE public."Reservations_ReservationId_seq" OWNED BY public."Reservat
 
 
 --
--- TOC entry 237 (class 1259 OID 41117)
+-- TOC entry 232 (class 1259 OID 16428)
 -- Name: Reservations_UserId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -434,8 +460,8 @@ CREATE SEQUENCE public."Reservations_UserId_seq"
 ALTER TABLE public."Reservations_UserId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3443 (class 0 OID 0)
--- Dependencies: 237
+-- TOC entry 3425 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: Reservations_UserId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -443,7 +469,7 @@ ALTER SEQUENCE public."Reservations_UserId_seq" OWNED BY public."Reservations"."
 
 
 --
--- TOC entry 215 (class 1259 OID 16398)
+-- TOC entry 233 (class 1259 OID 16429)
 -- Name: Roles; Type: TABLE; Schema: public; Owner: useradmin
 --
 
@@ -456,7 +482,7 @@ CREATE TABLE public."Roles" (
 ALTER TABLE public."Roles" OWNER TO useradmin;
 
 --
--- TOC entry 223 (class 1259 OID 40961)
+-- TOC entry 234 (class 1259 OID 16434)
 -- Name: Roles_RoleId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -472,8 +498,8 @@ CREATE SEQUENCE public."Roles_RoleId_seq"
 ALTER TABLE public."Roles_RoleId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3444 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3426 (class 0 OID 0)
+-- Dependencies: 234
 -- Name: Roles_RoleId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -481,12 +507,11 @@ ALTER SEQUENCE public."Roles_RoleId_seq" OWNED BY public."Roles"."RoleId";
 
 
 --
--- TOC entry 214 (class 1259 OID 16390)
+-- TOC entry 235 (class 1259 OID 16435)
 -- Name: Users; Type: TABLE; Schema: public; Owner: useradmin
 --
 
 CREATE TABLE public."Users" (
-    "OauthId" integer NOT NULL,
     "Lastname" text NOT NULL,
     "Firstname" text NOT NULL,
     "Age" integer NOT NULL,
@@ -494,14 +519,15 @@ CREATE TABLE public."Users" (
     "Active" boolean NOT NULL,
     "Description" text,
     "UserId" integer NOT NULL,
-    "RoleId" integer NOT NULL
+    "RoleId" integer NOT NULL,
+    "Password" character varying(512) NOT NULL
 );
 
 
 ALTER TABLE public."Users" OWNER TO useradmin;
 
 --
--- TOC entry 224 (class 1259 OID 40970)
+-- TOC entry 236 (class 1259 OID 16440)
 -- Name: Users_RoleId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -517,8 +543,8 @@ CREATE SEQUENCE public."Users_RoleId_seq"
 ALTER TABLE public."Users_RoleId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3445 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3427 (class 0 OID 0)
+-- Dependencies: 236
 -- Name: Users_RoleId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -526,7 +552,7 @@ ALTER SEQUENCE public."Users_RoleId_seq" OWNED BY public."Users"."RoleId";
 
 
 --
--- TOC entry 222 (class 1259 OID 32779)
+-- TOC entry 237 (class 1259 OID 16441)
 -- Name: Users_UserId_seq; Type: SEQUENCE; Schema: public; Owner: useradmin
 --
 
@@ -542,8 +568,8 @@ CREATE SEQUENCE public."Users_UserId_seq"
 ALTER TABLE public."Users_UserId_seq" OWNER TO useradmin;
 
 --
--- TOC entry 3446 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3428 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: Users_UserId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: useradmin
 --
 
@@ -551,7 +577,7 @@ ALTER SEQUENCE public."Users_UserId_seq" OWNED BY public."Users"."UserId";
 
 
 --
--- TOC entry 3225 (class 2604 OID 41008)
+-- TOC entry 3221 (class 2604 OID 16442)
 -- Name: Dishes DishId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -559,7 +585,7 @@ ALTER TABLE ONLY public."Dishes" ALTER COLUMN "DishId" SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 3228 (class 2604 OID 41039)
+-- TOC entry 3222 (class 2604 OID 16443)
 -- Name: MenuDish MenuDishId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -567,7 +593,7 @@ ALTER TABLE ONLY public."MenuDish" ALTER COLUMN "MenuDishId" SET DEFAULT nextval
 
 
 --
--- TOC entry 3229 (class 2604 OID 41046)
+-- TOC entry 3223 (class 2604 OID 16444)
 -- Name: MenuDish MenuId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -575,7 +601,7 @@ ALTER TABLE ONLY public."MenuDish" ALTER COLUMN "MenuId" SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3230 (class 2604 OID 41052)
+-- TOC entry 3224 (class 2604 OID 16445)
 -- Name: MenuDish DishId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -583,7 +609,7 @@ ALTER TABLE ONLY public."MenuDish" ALTER COLUMN "DishId" SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3222 (class 2604 OID 41017)
+-- TOC entry 3225 (class 2604 OID 16446)
 -- Name: Menus MenuId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -591,7 +617,7 @@ ALTER TABLE ONLY public."Menus" ALTER COLUMN "MenuId" SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3223 (class 2604 OID 41024)
+-- TOC entry 3226 (class 2604 OID 16447)
 -- Name: Menus UserId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -599,7 +625,7 @@ ALTER TABLE ONLY public."Menus" ALTER COLUMN "UserId" SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3234 (class 2604 OID 41068)
+-- TOC entry 3227 (class 2604 OID 16448)
 -- Name: Ratings RatingId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -607,7 +633,7 @@ ALTER TABLE ONLY public."Ratings" ALTER COLUMN "RatingId" SET DEFAULT nextval('p
 
 
 --
--- TOC entry 3235 (class 2604 OID 41075)
+-- TOC entry 3228 (class 2604 OID 16449)
 -- Name: Ratings UserId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -615,7 +641,7 @@ ALTER TABLE ONLY public."Ratings" ALTER COLUMN "UserId" SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 3231 (class 2604 OID 41089)
+-- TOC entry 3229 (class 2604 OID 16450)
 -- Name: ReservationDish ReservationDishId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -623,7 +649,7 @@ ALTER TABLE ONLY public."ReservationDish" ALTER COLUMN "ReservationDishId" SET D
 
 
 --
--- TOC entry 3232 (class 2604 OID 41094)
+-- TOC entry 3230 (class 2604 OID 16451)
 -- Name: ReservationDish ReservationId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -631,7 +657,7 @@ ALTER TABLE ONLY public."ReservationDish" ALTER COLUMN "ReservationId" SET DEFAU
 
 
 --
--- TOC entry 3233 (class 2604 OID 41099)
+-- TOC entry 3231 (class 2604 OID 16452)
 -- Name: ReservationDish DishId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -639,7 +665,7 @@ ALTER TABLE ONLY public."ReservationDish" ALTER COLUMN "DishId" SET DEFAULT next
 
 
 --
--- TOC entry 3226 (class 2604 OID 41111)
+-- TOC entry 3232 (class 2604 OID 16453)
 -- Name: Reservations ReservationId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -647,7 +673,7 @@ ALTER TABLE ONLY public."Reservations" ALTER COLUMN "ReservationId" SET DEFAULT 
 
 
 --
--- TOC entry 3227 (class 2604 OID 41118)
+-- TOC entry 3233 (class 2604 OID 16454)
 -- Name: Reservations UserId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -655,7 +681,15 @@ ALTER TABLE ONLY public."Reservations" ALTER COLUMN "UserId" SET DEFAULT nextval
 
 
 --
--- TOC entry 3221 (class 2604 OID 40962)
+-- TOC entry 3234 (class 2604 OID 16515)
+-- Name: Reservations MenuId; Type: DEFAULT; Schema: public; Owner: useradmin
+--
+
+ALTER TABLE ONLY public."Reservations" ALTER COLUMN "MenuId" SET DEFAULT nextval('public."Reservations_MenuId_seq"'::regclass);
+
+
+--
+-- TOC entry 3235 (class 2604 OID 16455)
 -- Name: Roles RoleId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -663,7 +697,7 @@ ALTER TABLE ONLY public."Roles" ALTER COLUMN "RoleId" SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3219 (class 2604 OID 32780)
+-- TOC entry 3236 (class 2604 OID 16456)
 -- Name: Users UserId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -671,7 +705,7 @@ ALTER TABLE ONLY public."Users" ALTER COLUMN "UserId" SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3220 (class 2604 OID 40971)
+-- TOC entry 3237 (class 2604 OID 16457)
 -- Name: Users RoleId; Type: DEFAULT; Schema: public; Owner: useradmin
 --
 
@@ -679,238 +713,7 @@ ALTER TABLE ONLY public."Users" ALTER COLUMN "RoleId" SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3405 (class 0 OID 24601)
--- Dependencies: 217
--- Data for Name: Dishes; Type: TABLE DATA; Schema: public; Owner: useradmin
---
-
-COPY public."Dishes" ("Description", "Price", "Type", "Name", "DishId") FROM stdin;
-\.
-
-
---
--- TOC entry 3407 (class 0 OID 24618)
--- Dependencies: 219
--- Data for Name: MenuDish; Type: TABLE DATA; Schema: public; Owner: useradmin
---
-
-COPY public."MenuDish" ("MenuDishId", "MenuId", "DishId") FROM stdin;
-\.
-
-
---
--- TOC entry 3404 (class 0 OID 24588)
--- Dependencies: 216
--- Data for Name: Menus; Type: TABLE DATA; Schema: public; Owner: useradmin
---
-
-COPY public."Menus" ("Name", "Description", "MenuId", "UserId") FROM stdin;
-\.
-
-
---
--- TOC entry 3409 (class 0 OID 24661)
--- Dependencies: 221
--- Data for Name: Ratings; Type: TABLE DATA; Schema: public; Owner: useradmin
---
-
-COPY public."Ratings" ("Date", "Comment", "Score", "ReviewerName", "RatingId", "UserId") FROM stdin;
-\.
-
-
---
--- TOC entry 3408 (class 0 OID 24634)
--- Dependencies: 220
--- Data for Name: ReservationDish; Type: TABLE DATA; Schema: public; Owner: useradmin
---
-
-COPY public."ReservationDish" ("ReservationDishId", "ReservationId", "DishId") FROM stdin;
-\.
-
-
---
--- TOC entry 3406 (class 0 OID 24610)
--- Dependencies: 218
--- Data for Name: Reservations; Type: TABLE DATA; Schema: public; Owner: useradmin
---
-
-COPY public."Reservations" ("Date", "Address", "PhoneNumber", "State", "Comments", "TotalPrice", "ReservationId", "UserId") FROM stdin;
-\.
-
-
---
--- TOC entry 3403 (class 0 OID 16398)
--- Dependencies: 215
--- Data for Name: Roles; Type: TABLE DATA; Schema: public; Owner: useradmin
---
-
-COPY public."Roles" ("Name", "RoleId") FROM stdin;
-User	1
-Cook	2
-\.
-
-
---
--- TOC entry 3402 (class 0 OID 16390)
--- Dependencies: 214
--- Data for Name: Users; Type: TABLE DATA; Schema: public; Owner: useradmin
---
-
-COPY public."Users" ("OauthId", "Lastname", "Firstname", "Age", "Email", "Active", "Description", "UserId", "RoleId") FROM stdin;
-1234	Montilla Enriquez	Francisco	29	montilladevbe@gmail.com	t	Chill nerd	1	1
-1234	Markusse	Merel	32	merelmarkusse@gmail.com	t	Chill cook	2	2
-951	Markusse	Vincent	27	markussevincent@hotmail.com	t	Chill catsitter	3	3
-203	Masi	Maeva	29	montilladevbe@gmail.com	t	Chill kid	9	4
-204	Rojas	Analia	29	montilladevbe@gmail.com	t	Chill cute kid	10	5
-\.
-
-
---
--- TOC entry 3447 (class 0 OID 0)
--- Dependencies: 225
--- Name: Dishes_DishId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Dishes_DishId_seq"', 1, false);
-
-
---
--- TOC entry 3448 (class 0 OID 0)
--- Dependencies: 230
--- Name: MenuDish_DishId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."MenuDish_DishId_seq"', 1, false);
-
-
---
--- TOC entry 3449 (class 0 OID 0)
--- Dependencies: 228
--- Name: MenuDish_MenuDishId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."MenuDish_MenuDishId_seq"', 1, false);
-
-
---
--- TOC entry 3450 (class 0 OID 0)
--- Dependencies: 229
--- Name: MenuDish_MenuId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."MenuDish_MenuId_seq"', 1, false);
-
-
---
--- TOC entry 3451 (class 0 OID 0)
--- Dependencies: 226
--- Name: Menus_MenuId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Menus_MenuId_seq"', 1, false);
-
-
---
--- TOC entry 3452 (class 0 OID 0)
--- Dependencies: 227
--- Name: Menus_UserId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Menus_UserId_seq"', 1, false);
-
-
---
--- TOC entry 3453 (class 0 OID 0)
--- Dependencies: 231
--- Name: Ratings_RatingId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Ratings_RatingId_seq"', 1, false);
-
-
---
--- TOC entry 3454 (class 0 OID 0)
--- Dependencies: 232
--- Name: Ratings_UserId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Ratings_UserId_seq"', 1, false);
-
-
---
--- TOC entry 3455 (class 0 OID 0)
--- Dependencies: 235
--- Name: ReservationDish_DishId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."ReservationDish_DishId_seq"', 1, false);
-
-
---
--- TOC entry 3456 (class 0 OID 0)
--- Dependencies: 233
--- Name: ReservationDish_ReservationDishId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."ReservationDish_ReservationDishId_seq"', 1, false);
-
-
---
--- TOC entry 3457 (class 0 OID 0)
--- Dependencies: 234
--- Name: ReservationDish_ReservationId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."ReservationDish_ReservationId_seq"', 1, false);
-
-
---
--- TOC entry 3458 (class 0 OID 0)
--- Dependencies: 236
--- Name: Reservations_ReservationId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Reservations_ReservationId_seq"', 1, false);
-
-
---
--- TOC entry 3459 (class 0 OID 0)
--- Dependencies: 237
--- Name: Reservations_UserId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Reservations_UserId_seq"', 1, false);
-
-
---
--- TOC entry 3460 (class 0 OID 0)
--- Dependencies: 223
--- Name: Roles_RoleId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Roles_RoleId_seq"', 2, true);
-
-
---
--- TOC entry 3461 (class 0 OID 0)
--- Dependencies: 224
--- Name: Users_RoleId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Users_RoleId_seq"', 5, true);
-
-
---
--- TOC entry 3462 (class 0 OID 0)
--- Dependencies: 222
--- Name: Users_UserId_seq; Type: SEQUENCE SET; Schema: public; Owner: useradmin
---
-
-SELECT pg_catalog.setval('public."Users_UserId_seq"', 10, true);
-
-
---
--- TOC entry 3243 (class 2606 OID 41015)
+-- TOC entry 3239 (class 2606 OID 16459)
 -- Name: Dishes PK_DishId; Type: CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -919,7 +722,7 @@ ALTER TABLE ONLY public."Dishes"
 
 
 --
--- TOC entry 3247 (class 2606 OID 41044)
+-- TOC entry 3241 (class 2606 OID 16461)
 -- Name: MenuDish PK_MenuDishId; Type: CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -928,7 +731,7 @@ ALTER TABLE ONLY public."MenuDish"
 
 
 --
--- TOC entry 3241 (class 2606 OID 41031)
+-- TOC entry 3243 (class 2606 OID 16463)
 -- Name: Menus PK_MenuId; Type: CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -937,7 +740,7 @@ ALTER TABLE ONLY public."Menus"
 
 
 --
--- TOC entry 3251 (class 2606 OID 41082)
+-- TOC entry 3245 (class 2606 OID 16465)
 -- Name: Ratings PK_RatingId; Type: CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -946,7 +749,7 @@ ALTER TABLE ONLY public."Ratings"
 
 
 --
--- TOC entry 3249 (class 2606 OID 41104)
+-- TOC entry 3247 (class 2606 OID 16467)
 -- Name: ReservationDish PK_ReservationDishId; Type: CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -955,7 +758,7 @@ ALTER TABLE ONLY public."ReservationDish"
 
 
 --
--- TOC entry 3245 (class 2606 OID 41126)
+-- TOC entry 3249 (class 2606 OID 16469)
 -- Name: Reservations PK_ReservationId; Type: CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -964,7 +767,7 @@ ALTER TABLE ONLY public."Reservations"
 
 
 --
--- TOC entry 3239 (class 2606 OID 40979)
+-- TOC entry 3251 (class 2606 OID 16471)
 -- Name: Roles PK_RoleId; Type: CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -973,7 +776,7 @@ ALTER TABLE ONLY public."Roles"
 
 
 --
--- TOC entry 3237 (class 2606 OID 40969)
+-- TOC entry 3253 (class 2606 OID 16473)
 -- Name: Users PK_UserId; Type: CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -982,7 +785,16 @@ ALTER TABLE ONLY public."Users"
 
 
 --
--- TOC entry 3255 (class 2606 OID 41062)
+-- TOC entry 3255 (class 2606 OID 16529)
+-- Name: Users U_email; Type: CONSTRAINT; Schema: public; Owner: useradmin
+--
+
+ALTER TABLE ONLY public."Users"
+    ADD CONSTRAINT "U_email" UNIQUE ("Email");
+
+
+--
+-- TOC entry 3256 (class 2606 OID 16474)
 -- Name: MenuDish FK_DishId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -991,7 +803,7 @@ ALTER TABLE ONLY public."MenuDish"
 
 
 --
--- TOC entry 3257 (class 2606 OID 41105)
+-- TOC entry 3260 (class 2606 OID 16479)
 -- Name: ReservationDish FK_DishId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -1000,7 +812,7 @@ ALTER TABLE ONLY public."ReservationDish"
 
 
 --
--- TOC entry 3256 (class 2606 OID 41057)
+-- TOC entry 3257 (class 2606 OID 16484)
 -- Name: MenuDish FK_MenuId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -1009,7 +821,16 @@ ALTER TABLE ONLY public."MenuDish"
 
 
 --
--- TOC entry 3258 (class 2606 OID 41132)
+-- TOC entry 3262 (class 2606 OID 16523)
+-- Name: Reservations FK_MenuId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
+--
+
+ALTER TABLE ONLY public."Reservations"
+    ADD CONSTRAINT "FK_MenuId" FOREIGN KEY ("MenuId") REFERENCES public."Menus"("MenuId") NOT VALID;
+
+
+--
+-- TOC entry 3261 (class 2606 OID 16489)
 -- Name: ReservationDish FK_ReservationId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -1018,7 +839,7 @@ ALTER TABLE ONLY public."ReservationDish"
 
 
 --
--- TOC entry 3252 (class 2606 OID 40980)
+-- TOC entry 3264 (class 2606 OID 16494)
 -- Name: Users FK_RoleId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -1027,7 +848,7 @@ ALTER TABLE ONLY public."Users"
 
 
 --
--- TOC entry 3253 (class 2606 OID 41033)
+-- TOC entry 3258 (class 2606 OID 16499)
 -- Name: Menus FK_UserId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -1036,7 +857,7 @@ ALTER TABLE ONLY public."Menus"
 
 
 --
--- TOC entry 3259 (class 2606 OID 41083)
+-- TOC entry 3259 (class 2606 OID 16504)
 -- Name: Ratings FK_UserId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -1045,7 +866,7 @@ ALTER TABLE ONLY public."Ratings"
 
 
 --
--- TOC entry 3254 (class 2606 OID 41127)
+-- TOC entry 3263 (class 2606 OID 16509)
 -- Name: Reservations FK_UserId; Type: FK CONSTRAINT; Schema: public; Owner: useradmin
 --
 
@@ -1053,7 +874,7 @@ ALTER TABLE ONLY public."Reservations"
     ADD CONSTRAINT "FK_UserId" FOREIGN KEY ("UserId") REFERENCES public."Users"("UserId") NOT VALID;
 
 
--- Completed on 2023-01-09 08:45:25
+-- Completed on 2023-01-13 18:46:26
 
 --
 -- PostgreSQL database dump complete
