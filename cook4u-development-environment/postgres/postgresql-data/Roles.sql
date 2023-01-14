@@ -1,2 +1,3 @@
-INSERT INTO public."Roles" ("Name", "RoleId") VALUES ('User', 1);
-INSERT INTO public."Roles" ("Name", "RoleId") VALUES ('Cook', 2);
+INSERT INTO public."Roles" ("Name") VALUES ('User');
+INSERT INTO public."Roles" ("Name") VALUES ('Cook');
+INSERT INTO public."Roles" ("Name") VALUES ('Admin');
