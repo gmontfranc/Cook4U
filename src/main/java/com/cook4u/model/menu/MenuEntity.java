@@ -11,7 +11,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@Table(name = "Menus")
+@Table(name = "\"Menus\"")
 public class MenuEntity {
 
     public MenuEntity() {}

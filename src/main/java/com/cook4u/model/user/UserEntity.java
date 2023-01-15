@@ -3,6 +3,7 @@ package com.cook4u.model.user;
 import com.cook4u.model.menu.MenuEntity;
 import com.cook4u.model.reservation.ReservationEntity;
 import com.cook4u.model.role.RoleEntity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,7 +31,6 @@ public class UserEntity implements Serializable {
     @Column(name = "\"Age\"")
     private int age;
     @ManyToOne()
-    @JsonIgnore
     @JoinColumn(name = "\"RoleId\"")
     private RoleEntity role;
     @Column(name = "\"Active\"")
@@ -47,9 +47,11 @@ public class UserEntity implements Serializable {
     @JsonIgnore
     private String password;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Set<MenuEntity> menus;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Set<ReservationEntity> reservations;
 
