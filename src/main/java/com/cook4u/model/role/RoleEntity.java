@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Set;
 
@@ -16,12 +17,21 @@ import java.util.Set;
 @Table(name = "\"Roles\"")
 public class RoleEntity implements Serializable {
     public RoleEntity() {}
+
+    public RoleEntity(Role role) {
+        super();
+        this.name = role;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "\"RoleId\"")
     private Long id;
-    @Column(name = "\"Name\"")
-    private String name;
+
+    @Enumerated(EnumType.STRING)
+    @NotNull
+    @Column(name = "\"Name\"", nullable = false)
+    private Role name;
 
     @JsonIgnore
     @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)

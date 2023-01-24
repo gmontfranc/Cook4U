@@ -1,7 +1,7 @@
 package com.cook4u.controller;
 
 import com.cook4u.model.user.UserEntity;
-import com.cook4u.service.impl.UserService;
+import com.cook4u.service.UserService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
