@@ -18,14 +18,15 @@ public class AuthUtils {
 
     private RoleRepository roleRepository;
 
+    private final RoleEntity userRole = roleRepository.findByName(Role.User);
+
     public UserEntity createUserForSignup(SignupRequest signupRequest) {
        UserEntity user = new UserEntity();
         user.setActive(true);
         user.setEmail(signupRequest.getEmail());
         user.setFirstname(signupRequest.getFirstname());
         user.setLastname(signupRequest.getLastname());
-        RoleEntity userRole = roleRepository.findByName(Role.User);
-        System.out.println("#ROLE: "+userRole.toString());
+        user.setAge(signupRequest.getAge());
         user.setRole(userRole);
         user.setPassword(passwordEncoder.encode(signupRequest.getPassword()));
         return userRepository.save(user);

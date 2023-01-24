@@ -29,4 +29,8 @@ public class SignupRequest {
     @NotNull
     @Length(min = 5, max = 64)
     private String password;
+
+    @NotNull
+    @Length(min = 18)
+    private int age;
 }
