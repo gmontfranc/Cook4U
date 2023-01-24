@@ -6,20 +6,28 @@ import com.cook4u.model.role.Role;
 import com.cook4u.model.role.RoleEntity;
 import com.cook4u.model.role.RoleRepository;
 import com.cook4u.model.user.UserEntity;
+import com.cook4u.service.RoleService;
 import com.cook4u.service.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@AllArgsConstructor
 @RequestMapping("/api/user")
 public class UserController {
 
     private final UserService userService;
-    private final RoleRepository roleRepository;
-    private final RoleEntity cookRole = roleRepository.findByName(Role.Cook);
+    private final RoleService roleService;
+    private final RoleEntity cookRole;
     private final AuthUtils authUtils;
+
+    public UserController(UserService userService, RoleService roleService, AuthUtils authUtils) {
+        this.userService = userService;
+        this.roleService = roleService;
+        this.authUtils = authUtils;
+        cookRole = roleService.findByName(Role.Cook);
+    }
 
 
     @GetMapping("/users")
