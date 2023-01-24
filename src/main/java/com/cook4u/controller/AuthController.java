@@ -6,6 +6,7 @@ import com.cook4u.model.auth.AuthUtils;
 import com.cook4u.model.auth.SignupRequest;
 import com.cook4u.model.role.Role;
 import com.cook4u.model.role.RoleEntity;
+import com.cook4u.model.role.RoleRepository;
 import com.cook4u.model.user.UserEntity;
 import com.cook4u.model.user.UserRepository;
 import com.cook4u.security.configuration.JwtUtils;
@@ -30,6 +31,9 @@ public class AuthController {
     JwtUtils jwtUtil;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private RoleRepository roleRepository;
+    private final RoleEntity userRole = roleRepository.findByName(Role.User);
+
 
     private final AuthUtils authUtils;
 
@@ -56,9 +60,11 @@ public class AuthController {
         if(userRepository.findByEmail(signupRequest.getEmail()).isEmpty()) {
             //throw 409
         }
-        UserEntity user = authUtils.createUserForSignup(signupRequest);
+        UserEntity user = authUtils.SignupUser(signupRequest, userRole);
         String accessToken = jwtUtil.generateAccessToken(user);
         AuthResponse response = new AuthResponse(user.getEmail(), user.getFirstname());
         return ResponseEntity.ok().header("Authorization",accessToken).body(response);
     }
+
+
 }
