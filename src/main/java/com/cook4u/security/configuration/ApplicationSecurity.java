@@ -49,7 +49,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.authorizeRequests()
-                .antMatchers("/api/auth/login").permitAll()
+                .antMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated();
 
         http.exceptionHandling()
@@ -71,7 +71,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(
                 username -> userService.findByEmail(username)
                         .orElseThrow(
-                                () -> new UsernameNotFoundException("User" +username+" not found.")));
+                                () -> new UsernameNotFoundException("User" +username+" not found."))).passwordEncoder(passwordEncoder());
     }
 
 }

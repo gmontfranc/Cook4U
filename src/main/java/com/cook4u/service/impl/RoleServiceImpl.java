@@ -1,5 +1,6 @@
 package com.cook4u.service.impl;
 
+import com.cook4u.model.role.Role;
 import com.cook4u.model.role.RoleEntity;
 import com.cook4u.model.role.RoleRepository;
 import com.cook4u.service.RoleService;
@@ -24,5 +25,10 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public Iterable<RoleEntity> findAll() {
         return roleRepository.findAll();
+    }
+
+    @Override
+    public RoleEntity findByName(Role name) {
+        return roleRepository.findByName(name);
     }
 }

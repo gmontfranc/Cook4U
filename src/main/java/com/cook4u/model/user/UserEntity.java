@@ -84,7 +84,6 @@ public class UserEntity implements Serializable, UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();
         authorities.add(new SimpleGrantedAuthority(getRole().getName().toString()));
-        System.out.println("#FR AUTHORITIES: "+authorities);
         return authorities;
     }
 

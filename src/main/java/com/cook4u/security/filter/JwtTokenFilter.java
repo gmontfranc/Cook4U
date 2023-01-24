@@ -85,9 +85,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
         userDetails.setId(Integer.toUnsignedLong(Integer.parseInt(jwtSubjects[0])));
         userDetails.setEmail(jwtSubjects[1]);
         Role roleEnum = getRoleEnum(role);
-        System.out.println("#FR ACTUAL ENUM: " +roleEnum.toString());
-        userDetails.setRole(new RoleEntity(Role.valueOf(role)));
-        System.out.println("#FR AUTH: "+userDetails.getAuthorities());
+        userDetails.setRole(new RoleEntity(roleEnum));
         return userDetails;
     }
 
