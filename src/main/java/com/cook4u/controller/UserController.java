@@ -31,7 +31,7 @@ public class UserController {
 
 
     @GetMapping("/users")
-    @PreAuthorize("hasAuthority('crud:user')")
+    @PreAuthorize("hasAuthority('Admin')")
     public Iterable<UserEntity> getAllUsers() {
         return this.userService.findAll();
     }

@@ -57,6 +57,5 @@ public class JwtUtils {
                 .claim("role", user.getRole().getName())
                 .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
-
     }
 }

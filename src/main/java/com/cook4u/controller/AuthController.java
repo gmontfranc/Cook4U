@@ -56,8 +56,8 @@ public class AuthController {
 
             UserEntity user = (UserEntity) authentication.getPrincipal();
             String accessToken = jwtUtil.generateAccessToken(user);
-            AuthResponse response = new AuthResponse(user.getEmail(), user.getFirstname());
-            return ResponseEntity.ok().header("Authorization",accessToken).body(response);
+            AuthResponse response = new AuthResponse(accessToken);
+            return ResponseEntity.ok().body(response);
 
         } catch (BadCredentialsException ex) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
@@ -71,7 +71,7 @@ public class AuthController {
         }
         UserEntity user = authUtils.SignupUser(signupRequest, userRole);
         String accessToken = jwtUtil.generateAccessToken(user);
-        AuthResponse response = new AuthResponse(user.getEmail(), user.getFirstname());
+        AuthResponse response = new AuthResponse(accessToken);
         return ResponseEntity.ok().header("Authorization",accessToken).body(response);
     }
 
