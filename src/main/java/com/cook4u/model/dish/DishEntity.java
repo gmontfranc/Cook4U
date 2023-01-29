@@ -2,6 +2,7 @@ package com.cook4u.model.dish;
 
 import com.cook4u.model.menu.MenuEntity;
 import com.cook4u.model.reservation.ReservationEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +37,11 @@ public class DishEntity {
     private DishType type;
 
     @ManyToMany(mappedBy = "dishes", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Set<MenuEntity> menus;
 
     @ManyToMany(mappedBy = "reservationDishes", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Set<ReservationEntity> reservations;
 
 }

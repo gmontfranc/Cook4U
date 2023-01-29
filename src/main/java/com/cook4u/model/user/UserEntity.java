@@ -43,6 +43,7 @@ public class UserEntity implements Serializable, UserDetails {
     private int age;
     @ManyToOne()
     @JoinColumn(name = "\"RoleId\"")
+    @JsonIgnore
     private RoleEntity role;
 
     @Column(name = "\"Active\"")

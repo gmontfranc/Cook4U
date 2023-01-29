@@ -2,6 +2,7 @@ package com.cook4u.model.menu;
 
 import com.cook4u.model.dish.DishEntity;
 import com.cook4u.model.user.UserEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,5 +34,6 @@ public class MenuEntity {
 
     @ManyToOne
     @JoinColumn(name = "\"UserId\"")
+    @JsonIgnore
     private UserEntity user;
 }

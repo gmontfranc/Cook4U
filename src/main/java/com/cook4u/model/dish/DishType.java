@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 
 public enum DishType {
-    STARTER,
-    MAIN,
-    DESERT
+    Starter,
+    Main,
+    Dessert
 }
