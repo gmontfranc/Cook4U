@@ -2,6 +2,7 @@ package com.cook4u.controller;
 
 import com.cook4u.model.auth.AuthUtils;
 import com.cook4u.model.auth.SignupRequest;
+import com.cook4u.model.dto.SignupDto;
 import com.cook4u.model.role.Role;
 import com.cook4u.model.role.RoleEntity;
 import com.cook4u.model.user.UserEntity;
@@ -33,7 +34,7 @@ public class UserController {
 
     @PostMapping("/create")
     @PreAuthorize("hasAuthority('Admin')")
-    public UserEntity createCook(@RequestBody SignupRequest cook) {
+    public UserEntity createCook(@RequestBody SignupDto cook) {
         return authUtils.SignupUser(cook, cookRole);
     }
 }

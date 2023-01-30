@@ -1,5 +1,7 @@
 package com.cook4u.model.auth;
 
+import com.cook4u.model.dto.SignupDto;
+import com.cook4u.model.dto.mapper.GlobalMapper;
 import com.cook4u.model.role.Role;
 import com.cook4u.model.role.RoleEntity;
 import com.cook4u.model.role.RoleRepository;
@@ -16,16 +18,12 @@ public class AuthUtils {
 
     private UserService userService;
     private PasswordEncoder passwordEncoder;
+    private GlobalMapper mapper;
 
-    public UserEntity SignupUser(SignupRequest signupRequest, RoleEntity role) {
-       UserEntity user = new UserEntity();
-        user.setActive(true);
-        user.setEmail(signupRequest.getEmail());
-        user.setFirstname(signupRequest.getFirstname());
-        user.setLastname(signupRequest.getLastname());
-        user.setAge(signupRequest.getAge());
-        user.setRole(role);
-        user.setPassword(passwordEncoder.encode(signupRequest.getPassword()));
-        return userService.create(user);
+    public UserEntity SignupUser(SignupDto signupRequest, RoleEntity role) {
+       UserEntity user = mapper.convertToUserEntity(signupRequest);
+       user.setRole(role);
+       user.setPassword(passwordEncoder.encode(signupRequest.getPassword()));
+       return userService.create(user);
     }
 }

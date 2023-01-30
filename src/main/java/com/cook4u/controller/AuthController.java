@@ -4,6 +4,7 @@ import com.cook4u.model.auth.AuthRequest;
 import com.cook4u.model.auth.AuthResponse;
 import com.cook4u.model.auth.AuthUtils;
 import com.cook4u.model.auth.SignupRequest;
+import com.cook4u.model.dto.SignupDto;
 import com.cook4u.model.role.Role;
 import com.cook4u.model.role.RoleEntity;
 import com.cook4u.model.role.RoleRepository;
@@ -65,14 +66,14 @@ public class AuthController {
     }
     @PostMapping("/signup")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public ResponseEntity<?> register(@RequestBody SignupRequest signupRequest) {
+    public ResponseEntity<?> register(@RequestBody SignupDto signupRequest) {
         if(userRepository.findByEmail(signupRequest.getEmail()).isEmpty()) {
             //throw 409
         }
         UserEntity user = authUtils.SignupUser(signupRequest, userRole);
         String accessToken = jwtUtil.generateAccessToken(user);
         AuthResponse response = new AuthResponse(accessToken);
-        return ResponseEntity.ok().header("Authorization",accessToken).body(response);
+        return ResponseEntity.ok().body(response);
     }
 
 
