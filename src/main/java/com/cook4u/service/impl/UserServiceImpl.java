@@ -1,10 +1,12 @@
 package com.cook4u.service.impl;
 
+import com.cook4u.model.role.Role;
 import com.cook4u.model.user.UserEntity;
 import com.cook4u.model.user.UserRepository;
 import com.cook4u.service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,5 +30,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<UserEntity> findByEmail(String email) {
         return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public List<UserEntity> findAllByRoleName(Role name) {
+        return userRepository.findAllByRoleName(name);
     }
 }

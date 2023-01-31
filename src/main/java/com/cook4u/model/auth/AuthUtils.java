@@ -21,7 +21,7 @@ public class AuthUtils {
     private GlobalMapper mapper;
 
     public UserEntity SignupUser(SignupDto signupRequest, RoleEntity role) {
-       UserEntity user = mapper.convertToUserEntity(signupRequest);
+       UserEntity user = mapper.convertSignupRequestToUserEntity(signupRequest);
        user.setRole(role);
        user.setPassword(passwordEncoder.encode(signupRequest.getPassword()));
        return userService.create(user);

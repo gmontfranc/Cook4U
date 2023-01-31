@@ -13,6 +13,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public class SignupDto {
 
+    public SignupDto() {};
     @NotNull
     @Email
     @Length(min = 5, max = 50)

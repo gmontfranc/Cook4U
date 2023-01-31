@@ -1,7 +1,9 @@
 package com.cook4u.service;
 
+import com.cook4u.model.role.Role;
 import com.cook4u.model.user.UserEntity;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
@@ -12,5 +14,7 @@ public interface UserService {
 
 
     Optional<UserEntity> findByEmail(String email);
+
+    List<UserEntity> findAllByRoleName(Role name);
 
 }
