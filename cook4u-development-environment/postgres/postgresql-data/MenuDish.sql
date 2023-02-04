@@ -1,4 +1,4 @@
-INSERT INTO public."MenuDish" ("MenuId", "DishId") VALUES ( , 10);
+INSERT INTO public."MenuDish" ("MenuId", "DishId") VALUES ( 1, 10);
 INSERT INTO public."MenuDish" ("MenuId", "DishId") VALUES (1, 25);
 INSERT INTO public."MenuDish" ("MenuId", "DishId") VALUES (1, 16);
 INSERT INTO public."MenuDish" ("MenuId", "DishId") VALUES (2, 13);
