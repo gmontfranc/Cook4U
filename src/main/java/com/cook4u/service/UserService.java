@@ -13,6 +13,7 @@ public interface UserService {
     Iterable<UserEntity> findAll();
 
 
+    Optional<UserEntity> findById(Long id);
     Optional<UserEntity> findByEmail(String email);
 
     List<UserEntity> findAllByRoleName(Role name);

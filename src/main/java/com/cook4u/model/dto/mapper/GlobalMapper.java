@@ -37,4 +37,10 @@ public class GlobalMapper {
                 })
                 .collect(Collectors.toList());
     }
+
+    public UserDto convertUserEntityToDto(UserEntity user) {
+        UserDto userDto = mapper.map(user, UserDto.class);
+        userDto.setName(user.getFirstname()+ " "+user.getLastname());
+        return userDto;
+    }
 }

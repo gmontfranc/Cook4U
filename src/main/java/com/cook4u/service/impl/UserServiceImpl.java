@@ -28,6 +28,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Optional<UserEntity> findById(Long id) {
+        return userRepository.findById(id);
+    }
+
+    @Override
     public Optional<UserEntity> findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
