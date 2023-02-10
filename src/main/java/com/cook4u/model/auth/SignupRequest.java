@@ -15,19 +15,19 @@ public class SignupRequest {
 
     @NotNull
     @Email
-    @Length(min = 5, max = 50)
+    @Length(min = 12, max = 50)
     private String email;
     @NotNull
     @Email
-    @Length(min = 5, max = 50)
+    @Length(min = 3, max = 50)
     private String firstname;
     @NotNull
     @Email
-    @Length(min = 5, max = 50)
+    @Length(min = 3, max = 50)
     private String lastname;
 
     @NotNull
-    @Length(min = 5, max = 64)
+    @Length(min = 6, max = 64)
     private String password;
 
     @NotNull

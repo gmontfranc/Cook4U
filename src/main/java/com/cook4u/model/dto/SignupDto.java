@@ -31,6 +31,11 @@ public class SignupDto {
     @Length(min = 5, max = 64)
     private String password;
 
+
+    @NotNull
+    @Length(min = 5, max = 64)
+    private String password2;
+
     @NotNull
     @Length(min = 18)
     private int age;
