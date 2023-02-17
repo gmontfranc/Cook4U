@@ -16,6 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/user")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 
     private final UserService userService;
@@ -45,9 +46,19 @@ public class UserController {
         return authUtils.SignupUser(cook, cookRole);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/ck/{id}")
     @PreAuthorize("hasAuthority('User')")
     public UserDto getCookById(@PathVariable Long id) throws Exception {
+        Optional<UserEntity> userEntity = this.userService.findById(id);
+        if(userEntity.isPresent()) {
+            return mapper.convertUserEntityToDto(userEntity.get());
+        }
+        throw new RuntimeException(String.format("Not found with id %s", id));
+    }
+    
+    @GetMapping("/us/{id}")
+    @PreAuthorize("hasAuthority('Cook')")
+    public UserDto getUserById(@PathVariable Long id) throws Exception {
         Optional<UserEntity> userEntity = this.userService.findById(id);
         if(userEntity.isPresent()) {
             return mapper.convertUserEntityToDto(userEntity.get());

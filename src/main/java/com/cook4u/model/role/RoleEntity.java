@@ -16,7 +16,7 @@ import java.util.Set;
 @Getter
 @Setter
 @ToString
-@Table(name = "\"Roles\"")
+@Table(name = "roles")
 public class RoleEntity implements Serializable {
     public RoleEntity() {}
 
@@ -27,12 +27,12 @@ public class RoleEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "\"RoleId\"")
+    @Column(name = "role_id")
     private Long id;
 
     @Enumerated(EnumType.STRING)
     @NotNull
-    @Column(name = "\"Name\"", nullable = false)
+    @Column(name = "name", nullable = false)
     private Role name;
 
     @JsonIgnore

@@ -1,4 +1,4 @@
-INSERT INTO public."Dishes" ("Name", "Description", "Price", "Type")
+INSERT INTO public."dishes" ("name", "description", "price", "type")
 VALUES ('Bruschetta', 'Toasted bread topped with diced tomatoes, garlic, basil, and olive oil.', 8.00, 'Starter'),
        ('Spaghetti Carbonara', 'Spaghetti pasta tossed with pancetta, eggs, and parmesan cheese.', 15.00, 'Main'),
        ('Tiramisu', 'Layers of espresso-soaked ladyfingers and mascarpone cream.', 8.00, 'Dessert'),

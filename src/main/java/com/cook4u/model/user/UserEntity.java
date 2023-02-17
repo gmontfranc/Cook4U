@@ -5,6 +5,8 @@ import com.cook4u.model.reservation.ReservationEntity;
 import com.cook4u.model.role.RoleEntity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +29,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @Entity
-@Table(name = "\"Users\"")
+@Table(name = "users")
 public class UserEntity implements Serializable, UserDetails {
 
     public UserEntity() {
@@ -36,51 +38,57 @@ public class UserEntity implements Serializable, UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "\"UserId\"")
+    @Column(name = "user_id")
     private Long id;
 
-    @Column(name = "\"Age\"")
+    @Column(name = "age")
     private int age;
     @ManyToOne()
-    @JoinColumn(name = "\"RoleId\"")
+    @JoinColumn(name = "role_id")
     @JsonIgnore
     private RoleEntity role;
 
-    @Column(name = "\"Active\"")
+    @Column(name = "active")
     private boolean active;
 
-    @Column(name = "\"Lastname\"", nullable = false)
+    @Column(name = "lastname", nullable = false)
     @NotNull
     @Length(min = 5, max = 128)
     private String lastname;
 
-    @Column(name = "\"Firstname\"", nullable = false)
+    @Column(name = "firstname", nullable = false)
     @NotNull
     @Length(min = 5, max = 128)
     private String firstname;
 
-    @Column(name = "\"Email\"", nullable = false, unique = true)
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "\"Description\"")
+    @Column(name = "description", columnDefinition="TEXT")
     private String description;
 
-    @Column(name = "\"Password\"", nullable = false)
+    @Column(name = "password", nullable = false)
     @JsonIgnore
     private String password;
 
-    @JsonIgnore
+    @JsonManagedReference
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    //@JsonManagedReference
     private Set<MenuEntity> menus;
 
     @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    private Set<ReservationEntity> reservations;
+    private Set<ReservationEntity> reservationsUser;
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "cook", fetch = FetchType.LAZY)
+    private Set<ReservationEntity> reservationsCook;
 
     public RoleEntity getRole() {
         return role;
     }
 
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();

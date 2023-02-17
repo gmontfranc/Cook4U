@@ -28,6 +28,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AuthController {
     AuthenticationManager authManager;
     JwtUtils jwtUtil;
@@ -49,6 +50,7 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody @Valid AuthRequest request) {
+    	AuthResponse response = null;
         try {
             Authentication authentication = authManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
@@ -57,11 +59,12 @@ public class AuthController {
 
             UserEntity user = (UserEntity) authentication.getPrincipal();
             String accessToken = jwtUtil.generateAccessToken(user);
-            AuthResponse response = new AuthResponse(accessToken);
+            response = new AuthResponse(accessToken);
             return ResponseEntity.ok().body(response);
 
-        } catch (BadCredentialsException ex) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        } catch (Exception ex) {
+        	response = new AuthResponse("Identifiants Incorrects!");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
     }
     @PostMapping("/signup")

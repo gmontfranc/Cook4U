@@ -4,6 +4,9 @@ import com.cook4u.model.menu.MenuEntity;
 import com.cook4u.model.menu.MenuRepository;
 import com.cook4u.model.user.UserRepository;
 import com.cook4u.service.MenuService;
+
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,5 +33,10 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public Iterable<MenuEntity> findByCookId(Long id) {
         return userRepository.findById(id).get().getMenus();
+    }
+    
+    @Override
+    public Optional<MenuEntity> findMenu(Long id) {
+    	return menuRepository.findById(id);
     }
 }
