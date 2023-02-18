@@ -83,7 +83,7 @@ public class ReservationController {
 			rDto.setCookId(usId);
 			rDto.setState(res.getState());
 			rDto.setAddress(res.getAddress());
-			rDto.setComments(res.getAddress());
+			rDto.setComments(res.getComments());
 			rDto.setDate(res.getDate());
 			rDto.setNumberOfPeople(res.getNbPersons());
 			rDto.setPhoneNumber(Integer.parseInt(res.getPhoneNumber()));
