@@ -164,6 +164,11 @@ public class ReservationController {
         	response = new AuthResponse("Menu Not Found");
         	return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
         }
+
+		if(reservation.getMainDishes().isEmpty()) {
+			response = new AuthResponse("Reservation cannot be without any dishes");
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+		}
         
         MenuEntity menu = menuOp.get();
         
